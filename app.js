@@ -12,9 +12,12 @@ app.use(morgan("dev"));
 app.use("/api", require("./routes/api.route"));
 app.use(express.static(path.join(__dirname, "client/build")));
 app.get("/*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "client", "build", "client"), (err) => {
-    console.log(err);
-  });
+  res.sendFile(
+    path.resolve(__dirname, "client", "build", "index.html"),
+    (err) => {
+      console.log(err);
+    }
+  );
 });
 
 app.use((req, res, next) => {
