@@ -26,6 +26,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="*" element={<h2>Not found home this page</h2>} />
       </Routes>
     </BrowserRouter>
   );
