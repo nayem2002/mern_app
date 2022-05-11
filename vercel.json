@@ -2,5 +2,9 @@
   "version": 2,
   "name": "mern_app",
   "builds": [{ "src": "app.js", "use": "@vercel/node" }],
-  "routes": [{ "src": "/(.*)", "dest": "/app.js" }]
+
+  "routes": [
+    { "src": "/", "dest": "/app.js" },
+    { "src": "/about", "dest": "/app.js" }
+  ]
 }
