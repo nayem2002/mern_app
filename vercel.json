@@ -3,6 +3,7 @@
   "name": "mern_app",
   "builds": [{ "src": "app.js", "use": "@vercel/node" }],
 
+  "rewrites": [{ "source": "/(.*)", "destination": "/app.js" }],
   "routes": [
     { "src": "/", "dest": "/app.js" },
     { "src": "/about", "dest": "/app.js" }
